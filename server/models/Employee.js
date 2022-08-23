@@ -24,6 +24,7 @@ const employeeSchema = new mongoose.Schema({
     },
     managerID: {
         type: Number,
+        required: true,
     },
     joiningDate: {
         type: Date,
