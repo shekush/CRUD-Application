@@ -1,7 +1,8 @@
-const mongoose = require(mongoose);
+
+const mongoose = require("mongoose");
 
 
-const employeeData = new mongoose.Schema({
+const employeeSchema = new mongoose.Schema({
     employeeID: {
         type: Number,
         required: true,
@@ -26,9 +27,10 @@ const employeeData = new mongoose.Schema({
     },
     joiningDate: {
         type: Date,
-        required: true;
+        default: Date.now,
+        required: true,
     }
 });
 
-const Employee = mongoose.model("EmployeeData",EmployeeSchema);
-module.exports = Employee
+const Employee = mongoose.model("Employee",employeeSchema);
+module.exports = Employee;
