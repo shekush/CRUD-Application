@@ -114,6 +114,7 @@ function App() {
             <td class="list-content">{val.department}</td>
             <td class="list-content">{val.managerID}</td>
             <td class="list-content">{val.joiningDate}</td>
+            <td class="list-content"></td>
          </tr>
         )
       })};
