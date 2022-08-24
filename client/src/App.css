@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.entry{
+  text-align: left;
+
+
+
+}
+
+.add-button{
+  
+}
+
+.list-header{
+  height: 100px;
+  width: 500px;
+}
+
+.list-content{
+  height: 60px;
+  width: 500px;
+  
+}

@@ -37,68 +37,87 @@ function App() {
   return (
     <div className="App">
       <h1>CRUD Application</h1>
+      <div class="entry">
       <label>Employee ID</label>
       <input
        type="number" onChange={(event)=>{
         setEmployeeID(event.target.value);
       }}
-      />
-
+      /> </div>
+      <div class="entry">
       <label>Employee First Name</label>
       <input 
       type="text" onChange={(event)=>{
         setFirstName(event.target.value);
       }}
-      />
-
+      /> </div>
+      <div class="entry">
       <label>Employee Middle Name</label>
       <input 
       type="text" onChange={(event)=>{
         setMiddleName(event.target.value);
       }}
       />
-
+      </div>
+      <div class="entry">
       <label>Employee Last Name</label>
       <input 
       type="text" onChange={(event)=>{
         setLastName(event.target.value);
       }}
       />
-
+      </div>
+      <div class="entry">
       <label>Department</label>
       <input 
       type="text" onChange={(event)=>{
         setDepartment(event.target.value);
       }}/>
-
+      </div>
+      <div class="entry">
       <label>Manager ID</label>
       <input 
       type="number" onChange={(event)=>{
         setManagerID(event.target.value);
       }}
       />
+      </div>
+      <div class="entry">
       <label>Date of Joining</label>
       <input 
       type="date" onChange={(event)=>{
         setDate(event.target.value);
       }}
       />
-      <button onClick={addEmployee}>Add Employee</button>
+      </div>
+      
+      <button onClick={addEmployee} class="add-button">Add Employee</button>
       <h1>Employee List</h1>
+      <table>
+         <tr>
+            <th class="list-header">Employee ID</th>
+            <th class="list-header">Employee First Name</th>
+            <th class="list-header">Employee Middle Name</th>
+            <th class="list-header">Employee Last Name</th>
+            <th class="list-header">Department</th>
+            <th class="list-header">Manager ID</th>
+            <th class="list-header">Joining Date</th>
+            <th class="list-header"></th>
+         </tr>
       {employeeList.map((val, key)=>{
         return (
-          <div key={key}>
-            <h2>{val.employeeID}</h2>
-            <h2>{val.employeeFirstName}</h2>
-            <h2>{val.employeeMiddleName}</h2>
-            <h2>{val.employeeLastName}</h2>
-            <h2>{val.department}</h2>
-            <h2>{val.managerID}</h2>
-            <h2>{val.joiningDate}</h2>
-          </div>
+         <tr>
+            <td class="list-content">{val.employeeID}</td>
+            <td class="list-content">{val.employeeFirstName}</td>
+            <td class="list-content">{val.employeeMiddleName}</td>
+            <td class="list-content">{val.employeeLastName}</td>
+            <td class="list-content">{val.department}</td>
+            <td class="list-content">{val.managerID}</td>
+            <td class="list-content">{val.joiningDate}</td>
+         </tr>
         )
       })};
-
+      </table>
     </div>
   );
 }
